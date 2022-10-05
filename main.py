@@ -15,8 +15,8 @@ def random_insult(insults):
     return insult
 
 def speak_insult(insult):
-    CHINESE = 'zh-cn'
-    ttsObj= gTTS(text=insult, lang=CHINESE, slow=True)
+    lang = 'en'
+    ttsObj= gTTS(text=insult, lang=lang)
     ttsObj.save("insult.mp3")
     player = MPyg321Player()
 
